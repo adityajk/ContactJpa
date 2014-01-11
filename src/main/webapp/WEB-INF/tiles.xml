@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="template-main" template="/WEB-INF/views/layouts/main.jsp">
+		<put-attribute name="title" value="State Nodal Agency" />
+		<put-attribute name="bodyId" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/include/header.jsp" />
+		<put-attribute name="topNav" value="/WEB-INF/views/include/topNav.jsp" />
+		<put-attribute name="aside" value="/WEB-INF/views/include/aside.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/include/footer.jsp" />
+		<put-attribute name="scripts" value="/WEB-INF/views/include/scripts.jsp" />	
+	</definition>
+
+	<definition name="home" extends="template-main">
+		<put-attribute name="bodyId" value="myHome" />
+		<put-attribute name="content" value="/WEB-INF/views/layouts/content.jsp" />
+	</definition>
+
+	<!-- Login tiles -->
+	<definition name="signup" extends="template-main">
+		<put-attribute name="title" value="Sign Up" />
+		<put-attribute name="bodyId" value="mySignup" />
+		<put-attribute name="aside" value="" />
+		<put-attribute name="content" value="/WEB-INF/views/layouts/signup.jsp" />
+	</definition>
+	
+	<definition name="signin" extends="template-main">
+		<put-attribute name="title" value="Sign In" />
+		<put-attribute name="bodyId" value="mySignin" />
+		<put-attribute name="aside" value="" />
+		<put-attribute name="content" value="/WEB-INF/views/layouts/signin.jsp" />
+	</definition>
+	<!-- End of login tiles -->
+	
+	<!-- Events tiles -->
+	<definition name="eventList" extends="template-main">
+		<put-attribute name="title" value="All Events" />
+		<put-attribute name="bodyId" value="allEvents" />
+		<put-attribute name="content" value="/WEB-INF/views/events/allEvents.jsp" />
+	</definition>
+	
+	<definition name="myEvents" extends="template-main">
+		<put-attribute name="title" value="My Events" />
+		<put-attribute name="bodyId" value="myEvents" />
+		<put-attribute name="content" value="/WEB-INF/views/events/myEvents.jsp" />
+	</definition>
+	
+	<definition name="createEvent" extends="template-main">
+		<put-attribute name="title" value="Create Events" />
+		<put-attribute name="bodyId" value="createEvent" />
+		<put-attribute name="content" value="/WEB-INF/views/events/createEvent.jsp" />
+	</definition>
+	
+	<definition name="showEvent" extends="template-main">
+        <put-attribute name="title" value="One Event" />
+        <put-attribute name="bodyId" value="showEvent" />
+        <put-attribute name="content" value="/WEB-INF/views/events/showEvent.jsp" />
+    </definition>
+    <!-- End of events -->
+	
+	<!-- Profile tiles -->
+	<definition name="myProfile" extends="template-main">
+		<put-attribute name="title" value="My Profile" />
+		<put-attribute name="bodyId" value="myProfile" />
+		<put-attribute name="aside" value="/WEB-INF/views/profile/profileAside.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/profile/myProfile.jsp" />
+	</definition>
+	
+	<definition name="changePass" extends="template-main">
+		<put-attribute name="title" value="Change Password" />
+		<put-attribute name="bodyId" value="changePass" />
+		<put-attribute name="aside" value="/WEB-INF/views/profile/profileAside.jsp" />
+		<put-attribute name="content" value="/WEB-INF/views/profile/changePassword.jsp" />
+	</definition>
+	<!-- End of profile tiles -->
+	
+	<!-- Error pages -->
+	<definition name="errors/403" extends="template-main">
+		<put-attribute name="title" value="Forbidden" />
+		<put-attribute name="bodyId" value="error403" />
+		<put-attribute name="content" value="/WEB-INF/views/errors/403.jsp" />
+	</definition>
+	<definition name="errors/404" extends="template-main">
+		<put-attribute name="title" value="Page not found" />
+		<put-attribute name="bodyId" value="error404" />
+		<put-attribute name="content" value="/WEB-INF/views/errors/404.jsp" />
+	</definition>
+	<!-- End of error pages -->
+
+</tiles-definitions>       
